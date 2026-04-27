@@ -34,8 +34,9 @@
   --page-padding-x: 40px;
   --page-padding-y: 32px;
   --content-max-width: 1440px;
-  /* Frame 1440×900: main area below top header */
+  /* Frame heights (Figma) */
   --frame-height: 900px;
+  --frame-height-view-details: 937px;
   --content-area-min-height: calc(var(--frame-height) - var(--top-header-height));
   --table-row-height: 56px;
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -74,7 +75,6 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-table-header: var(--table-header);
-  --color-primary-hover: var(--primary-hover);
   --color-interactive-hover: var(--interactive-hover);
   --color-header-border: var(--header-border);
   --radius-lg: var(--radius);

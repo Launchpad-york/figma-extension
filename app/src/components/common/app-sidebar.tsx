@@ -109,7 +109,7 @@ export function AppSidebar() {
                       className={cn(
                         'flex items-center gap-2 rounded-md px-2.5 py-2 text-sm font-medium leading-none transition-colors',
                         active
-                          ? 'bg-primary text-primary-foreground'
+                          ? 'bg-accent text-accent-foreground'
                           : 'text-sidebar-foreground hover:bg-interactive-hover'
                       )}
                       aria-current={active ? 'page' : undefined}
@@ -117,7 +117,7 @@ export function AppSidebar() {
                       <Icon
                         className={cn(
                           'size-[18px] shrink-0',
-                          active ? 'text-primary-foreground' : 'text-sidebar-foreground'
+                          active ? 'text-accent-foreground' : 'text-sidebar-foreground'
                         )}
                       />
                       <span className="truncate">{item.label}</span>

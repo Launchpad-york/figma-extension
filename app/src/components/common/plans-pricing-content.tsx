@@ -52,7 +52,11 @@ function SortableHead({
   )
 }
 
-export function PlansPricingContent() {
+type PlansPricingContentProps = {
+  onViewDetails?: (planName: string) => void
+}
+
+export function PlansPricingContent({ onViewDetails }: PlansPricingContentProps) {
   return (
     <div className="w-full min-w-0 min-h-0">
       <div className="mb-6 text-left">
@@ -112,6 +116,7 @@ export function PlansPricingContent() {
                       size="icon"
                       className="size-9 border-border shadow-none"
                       aria-label={`View ${row.plan}`}
+                      onClick={() => onViewDetails?.(row.plan)}
                     >
                       <Eye className="size-4 text-sidebar-foreground" />
                     </Button>
