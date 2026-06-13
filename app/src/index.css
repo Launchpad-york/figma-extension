@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Design tokens — use only these via `var(--*)` and mapped Tailwind theme utilities. */
+:root {
+  --background: #f8f9fb;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --primary-hover: #2563eb;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #111827;
+  --muted: #f9fafb;
+  --muted-foreground: #6b7280;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #4b5563;
+  --sidebar-muted: #9ca3af;
+  --accent: #eff6ff;
+  --accent-foreground: #1d4ed8;
+  --destructive: #ef4444;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #3b82f6;
+  --table-header: #f9fafb;
+  --interactive-hover: #f3f4f6;
+  --header-border: #e5e7eb;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --sidebar-width: 256px;
+  --top-header-height: 64px;
+  --page-padding-x: 40px;
+  --page-padding-y: 32px;
+  --content-max-width: 1440px;
+  /* Frame heights (Figma) */
+  --frame-height: 900px;
+  --frame-height-view-details: 937px;
+  --content-area-min-height: calc(var(--frame-height) - var(--top-header-height));
+  --table-row-height: 56px;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --avatar-decorative: conic-gradient(
+    from 200deg,
+    #f472b6,
+    #a78bfa,
+    #60a5fa,
+    #34d399,
+    #fbbf24,
+    #f472b6
+  );
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-muted: var(--sidebar-muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-table-header: var(--table-header);
+  --color-interactive-hover: var(--interactive-hover);
+  --color-header-border: var(--header-border);
+  --radius-lg: var(--radius);
+  --radius-md: var(--radius-sm);
+  --font-sans: var(--font-sans);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground m-0 min-h-dvh font-sans antialiased;
+  }
+  #root {
+    @apply min-h-dvh w-full m-0 p-0;
+  }
+}
